@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<style src="css/style.css"></style>
+	<script src="https://use.fontawesome.com/22207e5600.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <html>
-<body>
+	<body>
+		<div id="header">
+			<h1>Tyler Christensen</h1>
+			<ul>
+			  <li><a id="current-page" href="">Home</a></li>
+			  <li><a href="assignments.html">Assignments</a></li>
+			  <li><a href="">Coming Soon</a></li>
+			  <li><a href="">Coming Soon</a></li>
+			</ul>
+		</div>
 
-<h1>Tyler Christensen</h1>
-<p>About me:</p>
+		<div id="about-section">
+			<div id="about-button"><b>About me</b> <i id="arrow" class="fa fa-chevron-down"></i></div>
+			<div id="info" hidden>
+				<p>Hello!</p>
+				<p>My name is Tyler Christensen I am a computer science major. I love working with computers and completing projects.</p>
+				<p>Currently I am working for a company called <a href="bladehq.com">BladeHQ</a> as part of my internship, I do backend web development for them (I work mostly in php and mysql, but I have learned Smarty Templates, jQuery, JavaScript, HTML, CSS, CRON scripts) and it has been pretty interesting. I am currently looking into creating a Nueral Network for them through FANN so that we can better predict how much of an item we need to stock</p>
+			</div>
 
-<a id="link" href="assignments.html">Assignments</a>
+			<i id="fa-pic" class="fa fa-image"></i>
+			<div>
+				<img height="700px" src="img/family.jpg" hidden>
+				<div id="notice">Click Here to see a picture of my family</div>
+			</div>
+		</div>
 
-</body>
+		<script src="js/index.js"></script>
+	</body>
 </html>
