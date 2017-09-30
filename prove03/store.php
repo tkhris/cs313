@@ -1,10 +1,9 @@
 <?php
 session_start();
 
-if (isset($_GET["new"]) && $_GET["new"] == "true")
+if (isset($_GET["new"]) && $_GET["new"] == true)
 {
 	session_destroy();
-
 }
 
 $products = array("benchmade" => 19.99, "buck" => 10.99, "spyderco" => 2.99);
