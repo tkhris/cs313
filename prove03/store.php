@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_GET["new"]) && $_GET["new"] == true)
+if (isset($_GET["new"]))
 {
 	session_destroy();
 }
