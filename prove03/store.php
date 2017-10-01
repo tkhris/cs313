@@ -4,6 +4,7 @@ session_start();
 if (isset($_GET["new"]))
 {
 	session_destroy();
+	header( 'Location: store.php' );
 }
 
 $products = array("benchmade" => 19.99, "buck" => 10.99, "spyderco" => 2.99);
