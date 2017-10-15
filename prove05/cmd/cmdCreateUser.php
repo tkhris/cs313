@@ -9,23 +9,15 @@ if (isset($_POST['username'])   && isset($_POST['password'])
 	."', '".$_POST['last_name']
 	."', '".$_POST['username']
 	."', '".$_POST['password'].")";
+
+	$db = new DB();
 	
-	DB::query($query_str);
+	$db->query($query_str);;
 
   	// login into instagram
  	
 
 }
-
-require_once('../classes/DB.php');
-
-$query_str = "INSERT INTO users (first_name, last_name, username, password) 
-	VALUES ('TYLER', 'CH', '".$_POST['username']
-	."', '".$_POST['password']."')";
-
-	$db = new DB();
-	
-	$db->query($query_str);
 
 header("Location: ../views/main.php");
 
