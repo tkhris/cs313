@@ -10,7 +10,7 @@ class User
 
   private function __construct() {
     require_once('DB.php');
-    if isset($_SESSION['user']){
+    if (isset($_SESSION['user'])){
       $user = $_SESSION['user'];
     }
     else {

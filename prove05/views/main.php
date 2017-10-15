@@ -1,8 +1,12 @@
 <?php
 
-include_once('../classes/User.php');
-if (isset($_SESSION['user']))
+require_once('../classes/User.php');
+
+session_start();
+if (isset($_SESSION['user'])) {
 	$user = $_SESSION['user'];
+}
+
 ?>
 
 <!DOCTYPE html>

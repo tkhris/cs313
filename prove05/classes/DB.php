@@ -3,13 +3,28 @@
 class DB {
 	private static $db;
 
-	private function __construct() {
-		$this->db = $db = pg_connect("host=localhost dbname=postgres user=postgres password=123");
+	public function __construct() {
 
-		// $db_connection = pg_connect("host=ec2-54-225-88-191.compute-1.amazonaws.com dbname=d6g13tr9767jlv user=npasxllojhqdym password=df9180a75cdb4fb5f4da337bee7daa3ba79cdd39442e56d81c300bc6b895f241");
+		$dbUrl = getenv('DATABASE_URL');
+
+		if (empty($dbUrl)) {
+			$this->db = $db = pg_connect("host=localhost dbname=postgres user=postgres password=123");
+			return;
+		}
+
+		$dbHost = $dbopts["host"];
+		$dbUser = $dbopts["user"];
+		$dbPassword = $dbopts["pass"];
+		$dbName = ltrim($dbopts["path"],'/');
+
+		$this->db = pg_connect("
+			host=".$dbHost." 
+			dbname=".$dbName." 
+			user=".$dbUser." 
+			password=".$dbPassword);
 	}
 
-	public static query($query_str) {
-		return pg_query($db, $query_str);
+	public function query($query_str) {
+		return pg_query($this->db, $query_str);
 	}
 }
