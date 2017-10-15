@@ -8,7 +8,7 @@ if (isset($_POST['username'])   && isset($_POST['password'])
 	VALUES ('".$_POST['first_name']
 	."', '".$_POST['last_name']
 	."', '".$_POST['username']
-	."', '".$_POST['password'].")";
+	."', '".$_POST['password']."')";
 
 	$db = new DB();
 	
