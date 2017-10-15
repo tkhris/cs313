@@ -17,6 +17,7 @@ class DB {
 		$dbPassword = $dbopts["pass"];
 		$dbName = ltrim($dbopts["path"],'/');
 		echo $dbName;
+		die();
 
 		$this->db = pg_connect("
 			host=".$dbHost." 
