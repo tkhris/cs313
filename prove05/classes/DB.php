@@ -12,12 +12,12 @@ class DB {
 			return;
 		}
 
+		$dbopts = parse_url($dbUrl);
+
 		$dbHost = $dbopts["host"];
 		$dbUser = $dbopts["user"];
 		$dbPassword = $dbopts["pass"];
 		$dbName = ltrim($dbopts["path"],'/');
-		echo $dbName;
-		die();
 
 		$this->db = pg_connect("
 			host=".$dbHost." 
