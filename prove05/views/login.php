@@ -25,6 +25,8 @@
 				<form action="../cmd/cmdCreateUser.php" method="post">
 					<input type="text" name="username" placeholder="User Name" required>
 					<input type="text" name="password" placeholder="Password" required>
+					<input type="text" name="first_name" placeholder="First Name" required>
+					<input type="text" name="last_name" placeholder="Last Name" required>
 					<button type="submit">Create</button>
 				</form>
 			</div>
