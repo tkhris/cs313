@@ -1,7 +1,7 @@
 <?php
 
 class DB {
-	private static $db;
+	private $db;
 
 	public function __construct() {
 
@@ -16,6 +16,7 @@ class DB {
 		$dbUser = $dbopts["user"];
 		$dbPassword = $dbopts["pass"];
 		$dbName = ltrim($dbopts["path"],'/');
+		echo $dbName;
 
 		$this->db = pg_connect("
 			host=".$dbHost." 
