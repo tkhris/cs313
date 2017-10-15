@@ -1,7 +1,8 @@
 <?php
 
-include_once('../classes/user.php');
-$current_user = $_SESSION['current_user'];
+include_once('../classes/User.php');
+if (isset($_SESSION['user']))
+	$user = $_SESSION['user'];
 ?>
 
 <!DOCTYPE html>
