@@ -12,8 +12,11 @@ if (isset($_POST['username'])   && isset($_POST['password'])
 	
 	DB::query($query_str);
 
-  // login into instagram
-  
+  	// login into instagram
+ 	
+
 }
+
+header("Location: ../views/main.php");
 
 ?>
