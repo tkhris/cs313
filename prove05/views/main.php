@@ -1,6 +1,6 @@
 <?php
 
-require_once('../classes/User.php');
+require_once('../classes/user.php');
 
 session_start();
 if (isset($_SESSION['user'])) {
