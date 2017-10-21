@@ -40,9 +40,6 @@ class User
     if (!$row)
       return false;
 
-    var_dump($row);
-    die();
-
     $this->username = $username;
     $this->first_name = $row['first_name'];
     $this->last_name = $row['last_name'];

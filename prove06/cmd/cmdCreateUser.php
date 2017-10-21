@@ -13,8 +13,6 @@ if (isset($_POST['username'])   && isset($_POST['password'])
 	$db = new DB();
 	
 	$db->query($query_str);;
-
-  	// login into instagram
  	
 	session_start();
 
