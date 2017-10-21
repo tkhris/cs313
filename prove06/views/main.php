@@ -5,13 +5,13 @@ require_once('../classes/user.php');
 session_start();
 if (isset($_SESSION['user'])) {
 	$user = $_SESSION['user'];
-}
 
-if (isset($_GET['code']))
-{
-	$user->setToken($_GET['code']);
-	$_SESSION['user'] = $user;
-	header("Location: main.php");	
+	if (isset($_GET['code']))
+	{
+		$user->setToken($_GET['code']);
+		$_SESSION['user'] = $user;
+		header("Location: main.php");	
+	}
 }
 
 ?>
