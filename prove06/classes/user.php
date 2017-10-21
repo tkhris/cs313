@@ -37,6 +37,9 @@ class User
 
     $row = pg_fetch_assoc($results);
 
+    if (!$row)
+      return false;
+
     $this->username = $username;
     $this->first_name = $row['first_name'];
     $this->last_name = $row['last_name'];

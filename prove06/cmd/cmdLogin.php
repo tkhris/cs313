@@ -5,7 +5,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
 {
   require_once('../classes/User.php');
   $user = new User;
-  $user->loadUserFromDb($_POST['username'], $_POST['password']);
+  if(!$user->loadUserFromDb($_POST['username'], $_POST['password']))
+  	header('Location: ../views/login.php');
 
   $_SESSION['user'] = $user;
 
