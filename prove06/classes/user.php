@@ -35,10 +35,10 @@ class User
     $db = new DB();
     $results = $db->query($query_str);
 
-    $row = pg_fetch_assoc($results);
-
-    if (!$row)
+    if (!$results)
       return false;
+
+    $row = pg_fetch_assoc($results);
 
     $this->username = $username;
     $this->first_name = $row['first_name'];
